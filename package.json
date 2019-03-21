@@ -5,11 +5,11 @@
   "author": "TSUYUSATO Kitsune <make.just.on@gmail.com>",
   "repository": "https://github.com/MakeNowJust/mkdo",
   "version": "0.1.0",
-  "main": "dist/src/index.js",
+  "main": "./dist/src/index.js",
   "bin": {
-    "mkdo": "dist/bin/mkdo.js"
+    "mkdo": "./dist/bin/mkdo.js"
   },
-  "file": [
+  "files": [
     "dist"
   ],
   "scripts": {
@@ -19,7 +19,7 @@
     "format:check": "ts-node ./bin/mkdo.ts -- format:check",
     "mkdo": "ts-node ./bin/mkdo.ts --"
   },
-  "types": "dist/src/index.ts",
+  "types": "./dist/src/index.ts",
   "dependencies": {
     "arg": "^4.1.0",
     "cosmiconfig": "^5.1.0",
