@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '11'
+
+script: yarn ci
+
+deploy:
+  provider: npm
+  email: make.just.on@gmail.com
+  api_key:
+    secure: hg9Uij0iM/VvRiWV2Dx5EuHilC+FB+aukr3gVmktZ+XsJEp+wL6VaX1RY8NicxlOZnGihucnIPOM0hv+CgP0znYGAKjzr9v2FqnE0z3nP4XGynhYZFj5M+JnpoeE//IicyjwCKnvQru8I5/fMYWGUGHkjg5Gl/0jfCW4at/UZXDYSRnHy36PSxu5To0Vuz+EhITMWdjQTVDofKIh3ASaKI3lgdCVqwGxrAR4qAKfGtgNjIZx/FrEiO+4kSdWQ/dKRzJ7lm4kU8vAA+YWrmMNCcYGoaijFLhCKH0rtj+Cf22xWh8NwGQd/qh0plWlFrie98TU4dK/msaHlSDCHkI99cd4/3FCle7OxyBMjR5QV7aNgTV/RTcvZbg8ttEVCDBxj02qJKNJqwXeF0QhhPs8Zzo7AZMPm3fuJzVRCV69zHoTC0560NfzTuX8aYonUiiePKNMdjbYsOgun9p09lhoUu8WF3xjy1QVJAEIskp0owCXOzIBh85eZzStO2+xKEKHA698aaVPgUiQ0dPf9pbXMbfwBm/0ifzdTFyPD4mVM42dCI179olYyztsBOVI5TWgbPbPuFeGGeYB+J8JcvprL4+ZEInGIH5rJd1jxV/CVUk8mf8BtRuOqsfhSR3E/fLP9zq6e6oLnCWRc4Q87r0q7rqKI4U0p8LCegDa1yjp9tQ=
+  on:
+    tags: true
+    repo: MakeNowJust/mkdo
