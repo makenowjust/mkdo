@@ -9,7 +9,7 @@
   "bin": {
     "mkdo": "dist/bin/mkdo.js"
   },
-  "files": [
+  "file": [
     "dist"
   ],
   "scripts": {
