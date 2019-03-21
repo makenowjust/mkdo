@@ -23,7 +23,7 @@ $ yarn add --dev mkdo
 Compiles TypeScript files into JavaScript.
 
 ```console
-$ tsc -p . --outDir dist
+$ tsc -p .
 ```
 
 ### format
@@ -46,10 +46,11 @@ $ prettier --list-different '{bin,src}/**/*.ts'
 
 ### ci
 
-Check project on CI.
+Tasks for running on CI.
 
 ```console
-$ yarn mkdo format:check
+$ yarn build
+$ yarn format:check
 $ yarn mkdo sync-scripts --mkdo 'ts-node ./bin/mkdo.ts --' --check
 ```
 

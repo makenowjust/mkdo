@@ -9,6 +9,9 @@
   "bin": {
     "mkdo": "dist/bin/mkdo.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "ts-node ./bin/mkdo.ts -- build",
     "ci": "ts-node ./bin/mkdo.ts -- ci",
@@ -16,6 +19,7 @@
     "format:check": "ts-node ./bin/mkdo.ts -- format:check",
     "mkdo": "ts-node ./bin/mkdo.ts --"
   },
+  "types": "dist/src/index.ts",
   "dependencies": {
     "arg": "^4.1.0",
     "cosmiconfig": "^5.1.0",
