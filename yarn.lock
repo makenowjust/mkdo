@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@types/cosmiconfig@^5.0.3":
+"@types/cosmiconfig@5.0.3":
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/@types/cosmiconfig/-/cosmiconfig-5.0.3.tgz#880644bb155d4038d3b752159684b777b0a159dd"
   integrity sha512-HgTGG7X5y9pLl3pixeo2XtDEFD8rq2EuH+S4mK6teCnAwWMucQl6v1D43hI4Uw1VJh6nu59lxLkqXHRl4uwThA==
   dependencies:
     "@types/node" "*"
 
-"@types/execa@^0.9.0":
+"@types/execa@0.9.0":
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/@types/execa/-/execa-0.9.0.tgz#9b025d2755f17e80beaf9368c3f4f319d8b0fb93"
   integrity sha512-mgfd93RhzjYBUHHV532turHC2j4l/qxsF/PbfDmprHDEUHmNZGlDn1CEsulGK3AfsPdhkWzZQT/S/k0UGhLGsA==
@@ -431,7 +431,7 @@ picomatch@^1.1.2:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-1.1.2.tgz#122f5efb555576410acc4bc328fb1a1eb69ae537"
   integrity sha512-FcXFq7ttIsWpwlMLaDvVskGLNSfKB0ibgEV4KpuJACD1S45dM4ViQuGrPMxNX3mXUtg3OZ3xC5Ny+lJS1PqIZg==
 
-prettier-package-json@^2.1.0:
+prettier-package-json@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/prettier-package-json/-/prettier-package-json-2.1.0.tgz#12160af8d24518f74c1f310d950caa467ec530b6"
   integrity sha512-0AV5tsBPkhljw0pDWQqCZhm+9+cre6QWQfMlOunjjZNN1cotSRQdyBn/koJijnO7VYP4aVEp9tA8RhlBLcOcLA==
@@ -444,7 +444,7 @@ prettier-package-json@^2.1.0:
     sort-object-keys "^1.1.2"
     sort-order "^1.0.1"
 
-prettier@^1.16.4:
+prettier@1.16.4:
   version "1.16.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.16.4.tgz#73e37e73e018ad2db9c76742e2647e21790c9717"
   integrity sha512-ZzWuos7TI5CKUeQAtFd6Zhm2s6EpAD/ZLApIhsF9pRvRtM1RFo61dM/4MSRUA0SuLugA/zgrZD8m0BaY46Og7g==
@@ -576,7 +576,7 @@ trough@^1.0.0:
   resolved "https://registry.yarnpkg.com/trough/-/trough-1.0.3.tgz#e29bd1614c6458d44869fc28b255ab7857ef7c24"
   integrity sha512-fwkLWH+DimvA4YCy+/nvJd61nWQQ2liO/nF/RjkTpiOGi+zxZzVkhb1mvbHIIW4b/8nDsYI8uTmAlc0nNkRMOw==
 
-ts-node@^8.0.3:
+ts-node@8.0.3:
   version "8.0.3"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.0.3.tgz#aa60b836a24dafd8bf21b54766841a232fdbc641"
   integrity sha512-2qayBA4vdtVRuDo11DEFSsD/SFsBXQBRZZhbRGSIkmYmVkWjULn/GGMdG10KVqkaGndljfaTD8dKjWgcejO8YA==
@@ -587,7 +587,7 @@ ts-node@^8.0.3:
     source-map-support "^0.5.6"
     yn "^3.0.0"
 
-typescript@^3.3.4000:
+typescript@3.3.4000:
   version "3.3.4000"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.3.4000.tgz#76b0f89cfdbf97827e1112d64f283f1151d6adf0"
   integrity sha512-jjOcCZvpkl2+z7JFn0yBOoLQyLoIkNZAs/fYJkUG6VKy6zLPHJGfQJYFHzibB6GJaF/8QrcECtlQ5cpvRHSMEA==
