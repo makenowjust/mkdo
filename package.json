@@ -1,0 +1,42 @@
+{
+  "name": "mkdo",
+  "description": "Markdown task runner",
+  "license": "MIT",
+  "author": "TSUYUSATO Kitsune <make.just.on@gmail.com>",
+  "repository": "https://github.com/MakeNowJust/mkdo",
+  "version": "0.0.0",
+  "main": "dist/src/index.js",
+  "bin": {
+    "mkdo": "dist/bin/mkdo.js"
+  },
+  "scripts": {
+    "build": "ts-node ./bin/mkdo.ts -- build",
+    "ci": "ts-node ./bin/mkdo.ts -- ci",
+    "format": "ts-node ./bin/mkdo.ts -- format",
+    "format:check": "ts-node ./bin/mkdo.ts -- format:check",
+    "mkdo": "ts-node ./bin/mkdo.ts --"
+  },
+  "dependencies": {
+    "arg": "^4.1.0",
+    "cosmiconfig": "^5.1.0",
+    "execa": "^1.0.0",
+    "mdast-util-to-string": "^1.0.5",
+    "picomatch": "^1.1.2",
+    "remark-parse": "^6.0.3",
+    "to-vfile": "^5.0.2",
+    "unified": "^7.1.0"
+  },
+  "devDependencies": {
+    "@types/cosmiconfig": "^5.0.3",
+    "@types/execa": "^0.9.0",
+    "prettier": "^1.16.4",
+    "prettier-package-json": "^2.1.0",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.4000"
+  },
+  "mkdo": {
+    "file": "readme.md",
+    "rootDepth": 2,
+    "rootPattern": "tasks"
+  }
+}
