@@ -2,6 +2,10 @@
 
 > mkdo - Markdown task runner
 
+[![Build Status][travis-badge]][travis]
+[![NPM version][npm-version-badge]][npm]
+
+
 ## install
 
 NPM:
@@ -70,3 +74,8 @@ $ yarn mkdo sync-scripts --mkdo 'ts-node ./bin/mkdo.ts --' --check
 MIT
 
 (C) 2019 TSUYUSATO Kitsune
+
+[travis-badge]: https://img.shields.io/travis/MakeNowJust/mkdo/master.svg?style=for-the-badge&logo=travis&colorA=8B6858
+[travis]: https://travis-ci.org/MakeNowJust/mkdo
+[npm-version-badge]: https://img.shields.io/npm/v/mkdo.svg?style=for-the-badge&logo=npm
+[npm]: https://www.npmjs.com/package/mkdo
