@@ -13,11 +13,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "ts-node ./bin/mkdo.ts -- build",
-    "ci": "ts-node ./bin/mkdo.ts -- ci",
-    "format": "ts-node ./bin/mkdo.ts -- format",
-    "format:check": "ts-node ./bin/mkdo.ts -- format:check",
-    "mkdo": "ts-node ./bin/mkdo.ts --"
+    "build": "ts-node ./bin/mkdo.ts build",
+    "ci": "ts-node ./bin/mkdo.ts ci",
+    "format": "ts-node ./bin/mkdo.ts format",
+    "format:check": "ts-node ./bin/mkdo.ts format:check",
+    "mkdo": "ts-node ./bin/mkdo.ts"
   },
   "types": "./dist/src/index.d.ts",
   "dependencies": {

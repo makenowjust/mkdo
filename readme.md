@@ -65,7 +65,7 @@ Tasks for running on CI.
 ```console
 $ yarn build
 $ yarn format:check
-$ yarn mkdo sync-scripts --mkdo 'ts-node ./bin/mkdo.ts --' --check
+$ yarn mkdo sync-scripts --mkdo 'ts-node ./bin/mkdo.ts' --check
 ```
 
 ## TODO
