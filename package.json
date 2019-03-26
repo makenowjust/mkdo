@@ -19,7 +19,7 @@
     "format:check": "ts-node ./bin/mkdo.ts -- format:check",
     "mkdo": "ts-node ./bin/mkdo.ts --"
   },
-  "types": "./dist/src/index.ts",
+  "types": "./dist/src/index.d.ts",
   "dependencies": {
     "arg": "^4.1.0",
     "cosmiconfig": "^5.1.0",
