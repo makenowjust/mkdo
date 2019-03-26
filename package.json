@@ -26,6 +26,7 @@
     "execa": "^1.0.0",
     "mdast-util-to-string": "^1.0.5",
     "picomatch": "^1.1.2",
+    "read-pkg-up": "^5.0.0",
     "remark-parse": "^6.0.3",
     "to-vfile": "^5.0.2",
     "unified": "^7.1.0"
@@ -33,6 +34,7 @@
   "devDependencies": {
     "@types/cosmiconfig": "5.0.3",
     "@types/execa": "0.9.0",
+    "@types/read-pkg-up": "^3.0.1",
     "prettier": "1.16.4",
     "prettier-package-json": "2.1.0",
     "ts-node": "8.0.3",

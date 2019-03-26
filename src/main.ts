@@ -1,6 +1,7 @@
 import arg from 'arg';
 import fs from 'fs';
 import cosmiconfig from 'cosmiconfig';
+import readPkg from 'read-pkg-up';
 
 import {parse} from './parse';
 import {executorMap, ExecContext} from './executor';
@@ -8,25 +9,26 @@ import {TaskMap} from './types';
 
 type DefaultTask = (taskMap: TaskMap, ctx: ExecContext) => Promise<number>;
 
-const help: DefaultTask = async () => {
+const help = async () => {
   console.log(`mkdo - Markdown task runner
 
 $ mkdo TASK_NAME [...ARGS]
 
 Options:
     -f FILE,    --file           FILE     Markdown file path containing tasks
-    -d DEPTH,   --root-depth     DEPTH    heading depth to determine task root
-    -p PATTERN, --root-pattern   PATTERN  heading contents glob to determine task root
+    -d DEPTH,   --root-depth     DEPTH    root heading depth
+    -p PATTERN, --root-pattern   PATTERN  root heading contents glob
     -s SEP,     --task-separator SEP      seperator string for nested tasks
     -w DIR,     --cwd            DIR      working direcotory on task execution
-    --help                                shows this help
-    --version                             shows mkdo version
+    --help                                show this help
+    --version                             show mkdo version
 
 Default Tasks:
 
-    help                                  shows this help
-    tasks                                 shows tasks (but execludes default tasks)
-    sync-scripts                          adds tasks to package.json's 'scripts' field
+    help                                  show this help
+    version                               show mkdo version
+    tasks                                 show task names
+    sync-scripts                          adds tasks to package.json's 'scripts'
 
 Examples:
 
@@ -42,7 +44,13 @@ Examples:
   return 0;
 };
 
-const tasks: DefaultTask = async taskMap => {
+const version = async () => {
+  const {pkg} = await readPkg({cwd: __dirname});
+  console.log(pkg.version);
+  return 0;
+};
+
+const tasks = async (taskMap: TaskMap) => {
   const tasks = Array.from(taskMap.values()).sort((a, b) =>
     a.name === b.name ? 0 : a.name > b.name ? 1 : -1,
   );
@@ -61,7 +69,7 @@ const tasks: DefaultTask = async taskMap => {
   return 0;
 };
 
-const syncScripts: DefaultTask = async (taskMap, ctx) => {
+const syncScripts = async (taskMap: TaskMap, ctx: ExecContext) => {
   const args = arg(
     {
       '--package-json-file': String,
@@ -109,8 +117,9 @@ const syncScripts: DefaultTask = async (taskMap, ctx) => {
   return 0;
 };
 
-const defaultTaskMap: Map<string, DefaultTask> = new Map([
+const defaultTaskMap = new Map<string, DefaultTask>([
   ['help', help],
+  ['version', version],
   ['tasks', tasks],
   ['sync-scripts', syncScripts],
 ]);
@@ -121,6 +130,7 @@ export const mkdo = async (argv = process.argv.slice(2)) => {
   const args = arg(
     {
       '--help': Boolean,
+      '--version': Boolean,
       '--file': String,
       '--root-depth': Number,
       '--root-pattern': String,
@@ -139,7 +149,12 @@ export const mkdo = async (argv = process.argv.slice(2)) => {
   );
 
   if (args['--help']) {
-    await help(null as any, null as any);
+    await help();
+    return;
+  }
+
+  if (args['--version']) {
+    await version();
     return;
   }
 
@@ -169,7 +184,7 @@ export const mkdo = async (argv = process.argv.slice(2)) => {
 
   if (!taskName) {
     ctx.error('no task');
-    await help(null as any, null as any);
+    await help();
     process.exit(1);
     return;
   }
