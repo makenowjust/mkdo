@@ -43,6 +43,6 @@
   "mkdo": {
     "file": "readme.md",
     "rootDepth": 2,
-    "rootPattern": "tasks"
+    "rootPattern": "Tasks"
   }
 }

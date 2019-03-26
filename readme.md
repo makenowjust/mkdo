@@ -1,11 +1,22 @@
-# mkdo
+<h1>mkdo</h1>
 
 > mkdo - Markdown task runner
 
 [![Build Status][travis-badge]][travis]
 [![NPM version][npm-version-badge]][npm]
 
-## install
+**Table of Contents**:
+
+- [Installation](#installation)
+- [Tasks](#tasks)
+  - [build](#build)
+  - [format](#format)
+    - [check](#check)
+  - [ci](#ci)
+- [TODO](#todo)
+- [License](#license)
+
+## Installation
 
 NPM:
 
@@ -19,7 +30,7 @@ Yarn:
 $ yarn add --dev mkdo
 ```
 
-## tasks
+## Tasks
 
 ### build
 
@@ -35,7 +46,7 @@ Runs linter to files.
 
 ```console
 $ prettier-package-json --write
-$ prettier --write '{bin,src}/**/*.ts'
+$ prettier --write readme.md '{bin,src}/**/*.ts'
 ```
 
 #### check
@@ -44,7 +55,7 @@ Fixes format error as possible.
 
 ```console
 $ prettier-package-json --list-different
-$ prettier --list-different '{bin,src}/**/*.ts'
+$ prettier --list-different readmd.md '{bin,src}/**/*.ts'
 ```
 
 ### ci
@@ -62,13 +73,13 @@ $ yarn mkdo sync-scripts --mkdo 'ts-node ./bin/mkdo.ts --' --check
 - [ ] write better document.
 - [ ] add tests.
 - [ ] add more executors.
-  + [ ] `javascript`
-  + [ ] `typescript`
-  + [ ] `python`
-  + [ ] `ruby`
-  + and more...
+  - [ ] `javascript`
+  - [ ] `typescript`
+  - [ ] `python`
+  - [ ] `ruby`
+  - and more...
 
-## license
+## License
 
 MIT
 
