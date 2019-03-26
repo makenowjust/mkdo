@@ -5,7 +5,6 @@
 [![Build Status][travis-badge]][travis]
 [![NPM version][npm-version-badge]][npm]
 
-
 ## install
 
 NPM:
