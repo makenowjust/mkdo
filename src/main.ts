@@ -117,7 +117,7 @@ const defaultTaskMap: Map<string, DefaultTask> = new Map([
 
 const explorer = cosmiconfig('mkdo');
 
-export const main = async () => {
+export const mkdo = async (argv = process.argv.slice(2)) => {
   const args = arg(
     {
       '--help': Boolean,
@@ -134,6 +134,7 @@ export const main = async () => {
     },
     {
       stopAtPositional: true,
+      argv,
     },
   );
 

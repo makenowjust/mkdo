@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import {main} from '../src/main';
+import {mkdo} from '../src';
 
-main().catch(err => console.error(err));
+mkdo().catch(err => console.error(err));
