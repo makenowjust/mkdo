@@ -2,4 +2,14 @@
 
 import {mkdo} from '../src';
 
-mkdo().catch(err => console.error(err));
+const main = async () => {
+  try {
+    const exitCode = await mkdo();
+    process.exit(exitCode);
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
+};
+
+main();

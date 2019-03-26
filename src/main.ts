@@ -126,7 +126,13 @@ const defaultTaskMap = new Map<string, DefaultTask>([
 
 const explorer = cosmiconfig('mkdo');
 
-export const mkdo = async (argv = process.argv.slice(2)) => {
+/**
+ * Executes `mkdo` command.
+ *
+ * @param argv command line arguments
+ * @returns the exit code
+ */
+export const mkdo = async (argv = process.argv.slice(2)): Promise<number> => {
   const args = arg(
     {
       '--help': Boolean,
@@ -149,13 +155,11 @@ export const mkdo = async (argv = process.argv.slice(2)) => {
   );
 
   if (args['--help']) {
-    await help();
-    return;
+    return await help();
   }
 
   if (args['--version']) {
-    await version();
-    return;
+    return await version();
   }
 
   const cwd = args['--cwd'] || process.cwd();
@@ -185,8 +189,7 @@ export const mkdo = async (argv = process.argv.slice(2)) => {
   if (!taskName) {
     ctx.error('no task');
     await help();
-    process.exit(1);
-    return;
+    return 1;
   }
 
   const taskMap = await parse(filePath, parseOptions);
@@ -194,14 +197,11 @@ export const mkdo = async (argv = process.argv.slice(2)) => {
   if (!task) {
     const defaultTask = defaultTaskMap.get(taskName);
     if (defaultTask) {
-      const exitCode = await defaultTask(taskMap, ctx);
-      process.exit(exitCode);
-      return;
+      return await defaultTask(taskMap, ctx);
     }
 
     ctx.error(`unknown task '${taskName}'`);
-    process.exit(1);
-    return;
+    return 1;
   }
 
   let exitCode = 0;
@@ -217,5 +217,5 @@ export const mkdo = async (argv = process.argv.slice(2)) => {
     }
   }
 
-  process.exit(exitCode);
+  return exitCode;
 };
