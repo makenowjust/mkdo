@@ -25,7 +25,7 @@
     "cosmiconfig": "^5.1.0",
     "execa": "^1.0.0",
     "mdast-util-to-string": "^1.0.5",
-    "picomatch": "^1.1.2",
+    "picomatch": "^2.0.0",
     "read-pkg-up": "^5.0.0",
     "remark-parse": "^6.0.3",
     "to-vfile": "^5.0.2",
