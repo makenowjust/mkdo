@@ -497,10 +497,10 @@ path-parse@^1.0.6:
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
   integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
 
-picomatch@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-1.1.2.tgz#122f5efb555576410acc4bc328fb1a1eb69ae537"
-  integrity sha512-FcXFq7ttIsWpwlMLaDvVskGLNSfKB0ibgEV4KpuJACD1S45dM4ViQuGrPMxNX3mXUtg3OZ3xC5Ny+lJS1PqIZg==
+picomatch@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.0.0.tgz#2500b6aa582f98f9f30c6d671bd48f288045f977"
+  integrity sha512-LCp3QJ9q6YPH7u0dZTgOuxj4DW20Li5R1xQAnzsOs9R0OmadvgxiPsTB224Jh/5pnyYlb48n9nETuQCOqB37Jw==
 
 prettier-package-json@2.1.0:
   version "2.1.0"
