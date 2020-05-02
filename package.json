@@ -29,7 +29,7 @@
     "read-pkg-up": "^5.0.0",
     "remark-parse": "^6.0.3",
     "to-vfile": "^6.0.0",
-    "unified": "^8.0.0"
+    "unified": "^9.0.0"
   },
   "devDependencies": {
     "@types/cosmiconfig": "5.0.3",

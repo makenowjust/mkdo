@@ -708,13 +708,14 @@ unherit@^1.0.4:
     inherits "^2.0.1"
     xtend "^4.0.1"
 
-unified@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/unified/-/unified-8.0.0.tgz#5a4e4ff1a1dc020003a4aba6cb35764c03997106"
-  integrity sha512-g6muNxZsX8ROcST/iuFdi20Poio+Z3dGc0XFPfxh6cfqu92LN6LlX2RuGYEYHhu+qRPIl99sC32eMOyJWc9L6Q==
+unified@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/unified/-/unified-9.0.0.tgz#12b099f97ee8b36792dbad13d278ee2f696eed1d"
+  integrity sha512-ssFo33gljU3PdlWLjNp15Inqb77d6JnJSfyplGJPT/a+fNRNyCBeveBAYJdO5khKdF6WVHa/yYCC7Xl6BDwZUQ==
   dependencies:
     bail "^1.0.0"
     extend "^3.0.0"
+    is-buffer "^2.0.0"
     is-plain-obj "^2.0.0"
     trough "^1.0.0"
     vfile "^4.0.0"
