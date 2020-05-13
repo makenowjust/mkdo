@@ -22,7 +22,7 @@
   "types": "./dist/src/index.d.ts",
   "dependencies": {
     "arg": "^4.1.0",
-    "cosmiconfig": "^5.1.0",
+    "cosmiconfig": "^6.0.0",
     "execa": "^1.0.0",
     "mdast-util-to-string": "^1.0.5",
     "picomatch": "^2.0.0",
