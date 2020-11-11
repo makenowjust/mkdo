@@ -23,7 +23,7 @@
   "dependencies": {
     "arg": "^4.1.0",
     "cosmiconfig": "^5.1.0",
-    "execa": "^1.0.0",
+    "execa": "^4.0.0",
     "mdast-util-to-string": "^2.0.0",
     "picomatch": "^2.0.0",
     "read-pkg-up": "^5.0.0",
