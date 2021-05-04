@@ -28,7 +28,7 @@
     "picomatch": "^2.0.0",
     "read-pkg-up": "^5.0.0",
     "remark-parse": "^9.0.0",
-    "to-vfile": "^6.0.0",
+    "to-vfile": "^7.0.0",
     "unified": "^9.0.0"
   },
   "devDependencies": {
