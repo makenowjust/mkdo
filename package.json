@@ -38,7 +38,7 @@
     "prettier": "1.18.2",
     "prettier-package-json": "2.1.3",
     "ts-node": "9.1.1",
-    "typescript": "4.2.4"
+    "typescript": "4.3.2"
   },
   "mkdo": {
     "file": "readme.md",
